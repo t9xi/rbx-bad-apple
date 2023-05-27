@@ -2,8 +2,6 @@ local data = require(game.ReplicatedStorage.data)
 
 print('finished loading data')
 
-local iris = require(game.ReplicatedStorage.Iris).Init(game.Players.LocalPlayer.PlayerGui)
-
 local WIDTH = 28
 local HEIGHT = 36
 
@@ -25,12 +23,6 @@ end
 
 local frameNum = 1
 local fps = 12
-
-iris:Connect(function()
-    iris.Window({"Debug"})
-    iris.Text({"Current frame: "..frameNum})
-    iris.End()
-end)
 
 while true do
     render(frameNum)
